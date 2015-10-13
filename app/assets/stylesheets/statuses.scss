@@ -20,5 +20,16 @@
 }
 
 .status.hover .admin{
-  display: inline;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.status .label a{
+  color:#fff;
+  cursor: pointer;
+}
+
+.status .admin .divider{
+  display: inline-block;
+  margin: 0 5px;
 }
