@@ -10,10 +10,20 @@
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-      <a href="#" class="navbar-brand">Treebook</a>
+      <%= link_to "Treebook", statuses_path, class:"navbar-brand" %>
       <ul class="nav navbar-nav ">
         <li><%= link_to "All Statuses", statuses_path %></li>
       </ul>
+      <ul class="nav navbar-nav pull-right">
+        <% if user_signed_in? %>
+          <li><%= link_to current_user.email, edit_user_registration_path %></li>
+          <li><button type="button" class="btn btn-danger"><%= link_to "Log out", destroy_user_session_path, :method => :delete %></button></li>
+        <% else %>
+          <li><%= link_to "Register", new_user_registration_path %></li>
+          <li><%= link_to "Log in", new_user_session_path %></li>
+        <% end %>
+      </ul>
+
     </div>
   </nav>
 

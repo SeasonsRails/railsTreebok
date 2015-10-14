@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle to manage users authentifications
 gem 'devise'
+gem 'simple_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
